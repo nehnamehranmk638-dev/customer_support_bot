@@ -13,5 +13,25 @@
     "timestamp": "2026-08-03 14:36:53",
     "role": "system",
     "content": "--- NEW SESSION STARTED ---"
+  },
+  {
+    "timestamp": "2026-08-03 16:37:12",
+    "role": "system",
+    "content": "--- NEW SESSION STARTED ---"
+  },
+  {
+    "timestamp": "2026-08-03 16:38:18",
+    "role": "system",
+    "content": "--- NEW SESSION STARTED ---"
+  },
+  {
+    "timestamp": "2026-08-03 16:39:24",
+    "role": "user",
+    "content": "My order hasn't arrived, it's been 6 days"
+  },
+  {
+    "timestamp": "2026-08-03 16:39:24",
+    "role": "assistant",
+    "content": " Dear Customer,\n\nThank you for reaching out to ShopEase Support. I'm sorry to hear that your order hasn't arrived yet. Standard delivery typically takes 3-5 business days, but sometimes there can be delays due to various reasons.\n\nTo help resolve this issue, could you please provide me with your order number? Once I have that, I will be able to track the status of your order and update you accordingly. If we find any discrepancies or delays, I will escalate your case to a human agent for further assistance.\n\nThank you for your patience and understanding.\n\nBest regards,\nNena\nShopEase Support"
   }
 ]

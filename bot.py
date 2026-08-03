@@ -9,7 +9,10 @@ from conversation import trim_history, build_messages, count_tokens
 from logger import save_message, save_session_divider
 
 load_dotenv()
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(
+    base_url="http://localhost:11434/v1",
+    api_key="ollama"
+)
 
 # Conversation history — grows during the session
 history = []

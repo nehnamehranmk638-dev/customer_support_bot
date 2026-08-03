@@ -1,7 +1,7 @@
 # config.py — all settings in one place
 
 COMPANY_NAME = "ShopEase"
-MODEL = "gpt-3.5-turbo"
+MODEL = "mistral"
 MAX_HISTORY_TOKENS = 2000
 MAX_RESPONSE_TOKENS = 400
 TEMPERATURE = 0.5           # slightly creative but mostly consistent

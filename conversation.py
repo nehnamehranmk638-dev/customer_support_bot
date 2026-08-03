@@ -1,16 +1,16 @@
 # conversation.py — handles history and token trimming
 
-import tiktoken
-from config import MODEL, MAX_HISTORY_TOKENS, SYSTEM_PROMPT
+from config import MAX_HISTORY_TOKENS, SYSTEM_PROMPT
 
 def count_tokens(messages):
-    """Count total tokens in a list of messages"""
-    encoder = tiktoken.encoding_for_model(MODEL)
-    total = sum(
-        len(encoder.encode(m["content"])) + 4
-        for m in messages
-    ) + 2
-    return total
+    """
+    Rough token count — works for any model including Ollama.
+    Approximation: 1 token ≈ 4 characters (good enough for trimming)
+    """
+    total = 0
+    for m in messages:
+        total += len(m["content"]) // 4 + 4  # 4 overhead per message
+    return total + 2
 
 def trim_history(history):
     """
@@ -19,7 +19,7 @@ def trim_history(history):
     System prompt is handled separately — never trimmed.
     """
     while count_tokens(history) > MAX_HISTORY_TOKENS and len(history) > 2:
-        # Remove oldest user+assistant pair (first 2 messages)
+        # Remove oldest user+assistant pair
         history.pop(0)
         history.pop(0)
     
